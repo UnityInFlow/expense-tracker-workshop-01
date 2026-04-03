@@ -1,15 +1,15 @@
 # Step 6 — SpringDoc / Swagger UI
 
-## Co budeme delat
-Pridame Swagger UI — interaktivni dokumentaci API primo v prohlizeci.
+## What we will do
+We will add Swagger UI — interactive API documentation directly in the browser.
 
-## Jak spustit
-1. Otevrete tuto slozku v IntelliJ IDEA (File → Open)
-2. Pockejte az se stahnou zavislosti
-3. Spustte: `./mvnw spring-boot:run`
-4. Otevrete v prohlizeci: http://localhost:8080/swagger-ui.html
+## How to run
+1. Open this folder in IntelliJ IDEA (File → Open)
+2. Wait for dependencies to download
+3. Run: `./mvnw spring-boot:run`
+4. Open in browser: http://localhost:8080/swagger-ui.html
 
-## Ukoly
-1. Odkomentujte springdoc zavislost v `pom.xml`
-2. Pridejte `@Tag` anotaci na tridu ExpenseController
-3. Pridejte `@Operation(summary = "...")` ke kazdemu endpointu
+## Tasks
+1. Uncomment the springdoc dependency in `pom.xml`
+2. Add `@Tag` annotation to the ExpenseController class
+3. Add `@Operation(summary = "...")` to each endpoint
