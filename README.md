@@ -1,10 +1,10 @@
-# Step 1 — Promenne a funkce (reseni)
+# Step 1 — Variables and functions (solution)
 
-## Co jsme udelali
-- val = nemenna promenna (jako konstanta), var = menna
-- Kotlin odhadne typ sam (type inference)
-- fun = funkce s parametry a navratovym typem
-- String templates — `$variable` a `${expression}`
+## What we did
+- val = immutable variable (like a constant), var = mutable
+- Kotlin infers the type automatically (type inference)
+- fun = function with parameters and return type
+- String templates — `$variable` and `${expression}`
 
-## Dalsi krok
-Otevri `step-02-start/` pro Data class a instance.
+## Next step
+Open `step-02-start/` for Data class and instances.

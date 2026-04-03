@@ -6,34 +6,34 @@ import org.springframework.stereotype.Component
 @Component
 class Playground : CommandLineRunner {
     override fun run(vararg args: String?) {
-        println("=== Step 1: Promenne a funkce — RESENI ===")
+        println("=== Step 1: Variables and functions — SOLUTION ===")
         println()
 
-        // val = nemenna (jako konstanta) — pouzivejte jako vychozi
-        val description = "Obed"
+        // val = immutable (like a constant) — use as default
+        val description = "Lunch"
         val amount = 150
         val paid = true
 
-        // String template — $ vlozi hodnotu promenne do textu
-        println("Popis: $description")
-        println("Castka: $amount Kc")
-        println("Zaplaceno: $paid")
+        // String template — $ inserts the variable value into text
+        println("Description: $description")
+        println("Amount: $amount CZK")
+        println("Paid: $paid")
         println()
 
-        // fun = funkce, : String = navratovy typ
+        // fun = function, : String = return type
         fun greet(name: String): String {
-            return "Ahoj $name, vitej na workshopu!"
+            return "Hello $name, welcome to the workshop!"
         }
         println(greet("Jan"))
         println()
 
-        // Kratky zapis s = misto { return ... }
+        // Short form with = instead of { return ... }
         fun withTax(amount: Int): Int = (amount * 1.21).toInt()
-        println("100 Kc s DPH: ${withTax(100)} Kc")     // 121
-        println("$amount Kc s DPH: ${withTax(amount)} Kc")  // 181
+        println("100 CZK with VAT: ${withTax(100)} CZK")     // 121
+        println("$amount CZK with VAT: ${withTax(amount)} CZK")  // 181
 
         // Bonus: formatExpense
-        fun formatExpense(desc: String, amt: Int): String = "$desc: $amt Kc"
-        println(formatExpense("Obed", 150))
+        fun formatExpense(desc: String, amt: Int): String = "$desc: $amt CZK"
+        println(formatExpense("Lunch", 150))
     }
 }
