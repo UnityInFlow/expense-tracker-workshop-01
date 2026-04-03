@@ -1,32 +1,149 @@
 # Expense Tracker Workshop — Session 1
+
 ## Kotlin & Spring Boot Basics
 
-Workshop pro DevOps inzenyry kteri chteji porozumet backend aplikacim.
+Workshop pro DevOps inzenyry kteri chteji porozumet backend aplikacim ktere deployuji. Zadne predchozi zkusenosti s programovanim nejsou potreba.
 
-### Struktura
+Na konci workshopu budete mit fungujici REST API s dokumentaci ktere muzete volat z prohlizece.
 
-Kazdy krok ma slozku `start` (s TODO ukoly) a `final` (kompletni reseni):
+---
 
-| Krok | Tema | Slozka |
-|------|------|--------|
-| Step 1 | Promenne a funkce | `step-01-start/` → `step-01-final/` |
-| Step 2 | Data class a instance | `step-02-start/` → `step-02-final/` |
-| Step 3 | List a HashMap | `step-03-start/` → `step-03-final/` |
-| Step 4 | Service class | `step-04-start/` → `step-04-final/` |
-| Step 5 | Spring Boot Controller | `step-05-start/` → `step-05-final/` |
-| Step 6 | SpringDoc / Swagger UI | `step-06-start/` → `step-06-final/` |
+## Struktura workshopu
 
-### Jak pouzivat
+| Krok | Tema | Co postavime |
+|------|------|-------------|
+| Step 1 | Promenne a funkce | `val`, `var`, `fun`, string templates |
+| Step 2 | Data class a instance | `data class Expense`, `copy()`, `toString()` |
+| Step 3 | List a HashMap | In-memory databaze, null safety `?.` |
+| Step 4 | Service class | `ExpenseService` — logika na jednom miste |
+| Step 5 | Spring Boot Controller | REST API na `localhost:8080` |
+| Step 6 | SpringDoc / Swagger UI | API dokumentace v prohlizeci |
 
-**Varianta A — slozky (doporuceno):**
-Otevrete slozku aktualniho kroku v IntelliJ nebo vlozite kod do play.kotlinlang.org.
+Kazdy krok ma:
+- **start** — projekt s TODO komentare (vase ukoly)
+- **final** — kompletni reseni s vysvetlujicimi komentare
 
-**Varianta B — git branches:**
-```bash
-git checkout step-01-start   # zacatek kroku 1
-git checkout step-01-final   # reseni kroku 1
+---
+
+## Jak pracovat s timto repozitarem
+
+### Varianta A — Slozky (doporuceno pro zacatecniky)
+
+Nepotrebujete umet git. Staci stahnout a otvirat slozky.
+
+**1. Stahnete repozitar:**
+
+Kliknete na zelene tlacitko **Code** → **Download ZIP** na teto strance.
+Rozbalte ZIP soubor.
+
+**2. Zaciname — Step 1:**
+
+Kroky 1-4 pouzivaji Kotlin Playground (zadna instalace):
+- Otevrete https://play.kotlinlang.org
+- Otevrete soubor `step-01-start/Main.kt` v textovem editoru
+- Zkopirujte obsah do Kotlin Playground
+- Doplnte kod kde vidite `// TODO:` komentare
+- Kliknete **Run**
+
+**3. Kdyz jste hotovi nebo se zasekli:**
+
+Otevrete `step-01-final/Main.kt` — tam je kompletni reseni s vysvetlenim.
+
+**4. Pokracujte na dalsi krok:**
+
+Otevrete `step-02-start/` a opakujte postup.
+
+**5. Od Stepu 5 prepiname do IntelliJ IDEA:**
+
+- Otevrete IntelliJ IDEA
+- File → Open → vyberte slozku `step-05-start`
+- Pockejte az se stahnou zavislosti
+- Spustte: `./mvnw spring-boot:run` (v terminalu IntelliJ)
+- Otevrete v prohlizeci: http://localhost:8080/expenses
+
+**Postup krok za krokem:**
+```
+step-01-start/  →  doplnte TODO  →  porovnejte s  →  step-01-final/
+step-02-start/  →  doplnte TODO  →  porovnejte s  →  step-02-final/
+step-03-start/  →  doplnte TODO  →  porovnejte s  →  step-03-final/
+step-04-start/  →  doplnte TODO  →  porovnejte s  →  step-04-final/
+step-05-start/  →  doplnte TODO  →  porovnejte s  →  step-05-final/  (IntelliJ)
+step-06-start/  →  doplnte TODO  →  porovnejte s  →  step-06-final/  (IntelliJ)
 ```
 
-### Pozadavky
+---
 
-Viz [SETUP.md](SETUP.md)
+### Varianta B — Git branches (pro pokrocile)
+
+Kazdy krok ma vlastni branch. Branch obsahuje POUZE soubory daneho kroku (na urovni root).
+
+**1. Naklonujte repozitar:**
+
+```bash
+git clone https://github.com/UnityInFlow/expense-tracker-workshop-01.git
+cd expense-tracker-workshop-01
+```
+
+**2. Prepnete na prvni krok:**
+
+```bash
+git checkout step-01-start
+```
+
+Nyni vidite `Main.kt` a `README.md` primo v rootu repozitare.
+
+**3. Pracujte na ukolech:**
+
+Upravte soubory primo — doplnte kod kde vidite `// TODO:`.
+
+Pro kroky 1-4: zkopirujte `Main.kt` do https://play.kotlinlang.org a spustte.
+Pro kroky 5-6: otevrete slozku v IntelliJ a spustte `./mvnw spring-boot:run`.
+
+**4. Kdyz jste hotovi nebo se zasekli:**
+
+```bash
+git stash                     # ulozi vase zmeny stranou
+git checkout step-01-final    # prepne na reseni
+```
+
+**5. Pokracujte dalsim krokem:**
+
+```bash
+git checkout step-02-start    # dalsi krok
+```
+
+**Vsechny dostupne branches:**
+```
+step-01-start    step-01-final
+step-02-start    step-02-final
+step-03-start    step-03-final
+step-04-start    step-04-final
+step-05-start    step-05-final
+step-06-start    step-06-final
+```
+
+**Tip — porovnani vasi prace s resenim:**
+```bash
+# Na step-01-start po vasi praci:
+git diff step-01-final -- Main.kt
+```
+
+---
+
+## Nastroje
+
+| Krok | Nastroj |
+|------|---------|
+| Step 1-4 | https://play.kotlinlang.org (nic neinstalujete) |
+| Step 5-6 | IntelliJ IDEA Community + JDK 21 |
+
+Podrobny navod k instalaci: [SETUP.md](SETUP.md)
+
+---
+
+## Navazujici workshop
+
+**Session 2 — SQLite + Repository + Validace**
+https://github.com/UnityInFlow/expense-tracker-workshop-02
+
+Data z Session 1 zmizi po restartu (HashMap = pamet). V Session 2 to opravime pomoci SQLite databaze.
