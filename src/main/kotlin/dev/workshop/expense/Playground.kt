@@ -6,32 +6,32 @@ import org.springframework.stereotype.Component
 @Component
 class Playground : CommandLineRunner {
     override fun run(vararg args: String?) {
-        println("=== Step 3: HashMap jako databaze ===")
+        println("=== Step 3: HashMap as a database ===")
         println()
 
-        // --- Ukol 1: Vytvor HashMap a pridej vydaje ---
+        // --- Task 1: Create HashMap and add expenses ---
         // TODO: val database = HashMap<Int, Expense>()
-        // TODO: Pridej 4 vydaje: database[1] = Expense(1, "Obed", 150, "2024-01-15")
-        //       ... (Kava 50, Taxi 320, Hotel 2500)
+        // TODO: Add 4 expenses: database[1] = Expense(1, "Lunch", 150, "2024-01-15")
+        //       ... (Coffee 50, Taxi 320, Hotel 2500)
 
-        // --- Ukol 2: Pocet ---
-        // TODO: println("Pocet: ${database.size}")
+        // --- Task 2: Count ---
+        // TODO: println("Count: ${database.size}")
 
-        // --- Ukol 3: Najdi podle ID — null safety ---
+        // --- Task 3: Find by ID — null safety ---
         // TODO: val found = database[2]
         //       println(found?.description)        // ?. = safe call
-        //       println(database[999]?.amount)      // null — zadna chyba
+        //       println(database[999]?.amount)      // null — no error
 
-        // --- Ukol 4: Vypis vsechny ---
+        // --- Task 4: Print all ---
         // TODO: for (expense in database.values) {
-        //           println("ID ${expense.id}: ${expense.description} — ${expense.amount} Kc")
+        //           println("ID ${expense.id}: ${expense.description} — ${expense.amount} CZK")
         //       }
 
-        // --- Ukol 5: Smaz ---
+        // --- Task 5: Delete ---
         // TODO: database.remove(1)
-        //       println("Po smazani: ${database.size}")
+        //       println("After deletion: ${database.size}")
 
-        // --- Bonus: Suma ---
+        // --- Bonus: Sum ---
         // TODO: val total = database.values.sumOf { it.amount }
     }
 }
