@@ -1,14 +1,14 @@
-# Step 2 — Data class a instance
+# Step 2 — Data class and instances
 
-## Co budeme delat
-Naucime se data class: jak definovat sablonu pro data a vytvaret instance.
+## What we will do
+We will learn data classes: how to define a template for data and create instances.
 
-## Jak spustit
-1. Otevrete tuto slozku v IntelliJ IDEA (File → Open)
-2. Pockejte az se stahnou zavislosti
-3. Spustte: `./mvnw spring-boot:run`
-4. Vystup uvidite v terminalu (ne v prohlizeci)
+## How to run
+1. Open this folder in IntelliJ IDEA (File → Open)
+2. Wait for dependencies to download
+3. Run: `./mvnw spring-boot:run`
+4. You will see the output in the terminal (not in the browser)
 
-## Ukoly
-1. Otevrete `src/main/kotlin/dev/workshop/expense/Expense.kt` a vytvorte data class
-2. Otevrete `Playground.kt` a doplnte TODO
+## Tasks
+1. Open `src/main/kotlin/dev/workshop/expense/Expense.kt` and create the data class
+2. Open `Playground.kt` and fill in the TODOs
