@@ -2,11 +2,11 @@
 
 ## Co jsme udelali
 - class ExpenseService — veskera logika na jednom miste
-- private = skryte implementacni detaily (database, nextId)
-- public metody = API tridy (add, getAll, delete, total, ...)
-- Single Responsibility Principle — kazda trida dela jednu vec
+- private = skryte detaily (database, nextId)
+- SRP — kazda trida dela jednu vec
 
 ## Architektura
+
 ```
 main() nebo Controller
        │
@@ -20,5 +20,5 @@ main() nebo Controller
 ```
 
 ## Dalsi krok
-Otevri `step-05-start/` pro Spring Boot & Controller.
-POZOR: Prepneme z Kotlin Playground do IntelliJ IDEA!
+Otevri `step-05-start/` pro Spring Boot Controller.
+Od tohoto kroku budeme mit HTTP API!

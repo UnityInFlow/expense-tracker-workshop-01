@@ -1,22 +1,27 @@
-# Step 5 — Spring Boot & Controller
-
-## Co uz mame
-- Step 1: Promenne a funkce
-- Step 2: Data class Expense
-- Step 3: HashMap jako databaze
-- Step 4: ExpenseService
-
-## POZOR: Prepneme z Kotlin Playground do IntelliJ IDEA!
+# Step 5 — Spring Boot Controller
 
 ## Co budeme delat
-Vytvorime REST API s Spring Boot. ExpenseController prijima HTTP requesty
-a deleguje je na ExpenseService.
+Pridame REST Controller — aplikace zacne prijímat HTTP requesty.
 
 ## Jak spustit
-1. Otevri tuto slozku v IntelliJ IDEA
-2. Pockej az se stahnou zavislosti
-3. Spust: `./mvnw spring-boot:run`
-4. Otevri: http://localhost:8080/expenses
+1. Otevrete tuto slozku v IntelliJ IDEA (File → Open)
+2. Pockejte az se stahnou zavislosti
+3. Spustte: `./mvnw spring-boot:run`
+4. Otevrete v prohlizeci: http://localhost:8080/expenses
 
 ## Ukoly
-Otevri ExpenseController.kt a doplni anotace a metody kde vidis TODO.
+Otevrete `src/main/kotlin/dev/workshop/expense/ExpenseController.kt` a doplnte anotace a metody.
+
+## Testovani API
+```bash
+# Pridat vydaj
+curl -X POST http://localhost:8080/expenses \
+  -H "Content-Type: application/json" \
+  -d '{"description":"Obed","amount":150}'
+
+# Zobrazit vsechny
+curl http://localhost:8080/expenses
+
+# Celkova suma
+curl http://localhost:8080/expenses/total
+```

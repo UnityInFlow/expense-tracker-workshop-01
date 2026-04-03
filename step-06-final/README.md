@@ -1,22 +1,15 @@
 # Step 6 — SpringDoc / Swagger UI (reseni)
 
 ## Co jsme udelali
-- SpringDoc automaticky generuje OpenAPI specifikaci z kodu
-- Swagger UI na http://localhost:8080/swagger-ui.html
-- @Operation — popis endpointu v Swagger UI
-- @Tag — skupiny endpointu
+- springdoc-openapi-starter-webmvc-ui — zavislost pro Swagger
+- @Tag = pojmenuje skupinu endpointu v dokumentaci
+- @Operation(summary = "...") = popis konkretniho endpointu
+- Swagger UI dostupne na http://localhost:8080/swagger-ui.html
 
-## FINALNI STAV SESSION 1
+## Vysledek
+Kompletni REST API s interaktivni dokumentaci.
+Muzete volat endpointy primo z prohlizece bez curl.
 
-Kompletni REST API s dokumentaci. Jeden problem: data zmizi po restartu!
-To opravime v Session 2 (expense-tracker-workshop-02).
-
-## Rekapitulace
-```
-Step 1: val/var, fun       → pojmenovani dat a akci
-Step 2: data class         → strukturovany model
-Step 3: HashMap            → in-memory databaze
-Step 4: Service            → logika na jednom miste
-Step 5: @RestController    → HTTP API
-Step 6: SpringDoc          → API dokumentace + Swagger UI
-```
+## Co dale
+**Session 2 — SQLite + Repository + Validace**
+https://github.com/UnityInFlow/expense-tracker-workshop-02

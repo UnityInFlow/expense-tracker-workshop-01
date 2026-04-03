@@ -1,16 +1,14 @@
 # Step 4 — Service class
 
-## Co uz mame
-- Step 1: Promenne a funkce
-- Step 2: Data class Expense
-- Step 3: HashMap jako in-memory databaze
-
 ## Co budeme delat
-Zabalime logiku do ExpenseService — jedna trida, jedna zodpovednost (SRP).
-Private/public — skryjeme implementacni detaily.
+Vytvorime ExpenseService — tridu ktera zapouzdruje vsechnu logiku.
 
-## Nastroj
-play.kotlinlang.org
+## Jak spustit
+1. Otevrete tuto slozku v IntelliJ IDEA (File → Open)
+2. Pockejte az se stahnou zavislosti
+3. Spustte: `./mvnw spring-boot:run`
+4. Vystup uvidite v terminalu (ne v prohlizeci)
 
 ## Ukoly
-Otevri Main.kt a doplni metody v ExpenseService kde vidis TODO.
+Otevrete `src/main/kotlin/dev/workshop/expense/ExpenseService.kt` a doplnte TODO metody.
+Pak otevrete `Playground.kt` a otestujte je.

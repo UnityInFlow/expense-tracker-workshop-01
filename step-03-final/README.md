@@ -1,11 +1,10 @@
-# Step 3 — List a HashMap (reseni)
+# Step 3 — HashMap jako databaze (reseni)
 
 ## Co jsme udelali
-- HashMap<Int, Expense> = key-value uloziste (jako Redis, ENV variables)
-- HashMap najde podle klice okamzite — O(1), List musi prochazet vse
-- Null safety: database[999] vrati null, ne chybu
-- ?. safe call operator — bezpecny pristup k nullable hodnotam
-- Kotlin nas nuti osetrovat null explicitne — to je vyhoda
+- HashMap<Int, Expense> = klic-hodnota databaze v pameti
+- database[id] = ... — pridani, database.remove(id) — smazani
+- Null safety: `?.` safe call — zadna NullPointerException
+- sumOf { } — agregace nad kolekci
 
 ## Dalsi krok
 Otevri `step-04-start/` pro Service class.

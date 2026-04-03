@@ -1,13 +1,14 @@
 # Step 2 — Data class a instance
 
-## Co uz mame
-- Step 1: Promenne (val/var) a funkce
-
 ## Co budeme delat
-Vytvorime data class Expense — strukturovany datovy model pro vydaje.
+Naucime se data class: jak definovat sablonu pro data a vytvaret instance.
 
-## Nastroj
-play.kotlinlang.org
+## Jak spustit
+1. Otevrete tuto slozku v IntelliJ IDEA (File → Open)
+2. Pockejte az se stahnou zavislosti
+3. Spustte: `./mvnw spring-boot:run`
+4. Vystup uvidite v terminalu (ne v prohlizeci)
 
 ## Ukoly
-Otevri Main.kt a doplni kod kde vidis TODO komentare.
+1. Otevrete `src/main/kotlin/dev/workshop/expense/Expense.kt` a vytvorte data class
+2. Otevrete `Playground.kt` a doplnte TODO

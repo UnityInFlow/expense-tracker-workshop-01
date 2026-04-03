@@ -38,28 +38,19 @@ Rozbalte ZIP soubor.
 
 **2. Zaciname — Step 1:**
 
-Kroky 1-4 pouzivaji Kotlin Playground (zadna instalace):
-- Otevrete https://play.kotlinlang.org
-- Otevrete soubor `step-01-start/Main.kt` v textovem editoru
-- Zkopirujte obsah do Kotlin Playground
-- Doplnte kod kde vidite `// TODO:` komentare
-- Kliknete **Run**
+1. Otevrete IntelliJ IDEA
+2. File → Open → vyberte slozku `step-01-start`
+3. Pockejte az se stahnou zavislosti
+4. Spustte: `./mvnw spring-boot:run`
+5. Vystup uvidite v terminalu IntelliJ
 
 **3. Kdyz jste hotovi nebo se zasekli:**
 
-Otevrete `step-01-final/Main.kt` — tam je kompletni reseni s vysvetlenim.
+Otevrete `step-01-final/` — tam je kompletni reseni s vysvetlenim.
 
 **4. Pokracujte na dalsi krok:**
 
 Otevrete `step-02-start/` a opakujte postup.
-
-**5. Od Stepu 5 prepiname do IntelliJ IDEA:**
-
-- Otevrete IntelliJ IDEA
-- File → Open → vyberte slozku `step-05-start`
-- Pockejte az se stahnou zavislosti
-- Spustte: `./mvnw spring-boot:run` (v terminalu IntelliJ)
-- Otevrete v prohlizeci: http://localhost:8080/expenses
 
 **Postup krok za krokem:**
 ```
@@ -67,9 +58,13 @@ step-01-start/  →  doplnte TODO  →  porovnejte s  →  step-01-final/
 step-02-start/  →  doplnte TODO  →  porovnejte s  →  step-02-final/
 step-03-start/  →  doplnte TODO  →  porovnejte s  →  step-03-final/
 step-04-start/  →  doplnte TODO  →  porovnejte s  →  step-04-final/
-step-05-start/  →  doplnte TODO  →  porovnejte s  →  step-05-final/  (IntelliJ)
-step-06-start/  →  doplnte TODO  →  porovnejte s  →  step-06-final/  (IntelliJ)
+step-05-start/  →  doplnte TODO  →  porovnejte s  →  step-05-final/
+step-06-start/  →  doplnte TODO  →  porovnejte s  →  step-06-final/
 ```
+
+**Pro kroky 1-4:** Vystup uvidite v terminalu IntelliJ (CommandLineRunner).
+
+**Pro kroky 5-6:** Otevrete v prohlizeci http://localhost:8080/expenses
 
 ---
 
@@ -90,14 +85,20 @@ cd expense-tracker-workshop-01
 git checkout step-01-start
 ```
 
-Nyni vidite `Main.kt` a `README.md` primo v rootu repozitare.
+Nyni vidite kompletni Maven projekt primo v rootu repozitare.
 
-**3. Pracujte na ukolech:**
+**3. Spustte projekt:**
 
-Upravte soubory primo — doplnte kod kde vidite `// TODO:`.
+```bash
+./mvnw spring-boot:run
+```
 
-Pro kroky 1-4: zkopirujte `Main.kt` do https://play.kotlinlang.org a spustte.
-Pro kroky 5-6: otevrete slozku v IntelliJ a spustte `./mvnw spring-boot:run`.
+Pro kroky 1-4: vystup uvidite v terminalu.
+Pro kroky 5-6: otevrete http://localhost:8080/expenses v prohlizeci.
+
+**Pracujte na ukolech:**
+
+Otevrete projekt v IntelliJ IDEA a upravte soubory — doplnte kod kde vidite `// TODO:`.
 
 **4. Kdyz jste hotovi nebo se zasekli:**
 
@@ -124,18 +125,17 @@ step-06-start    step-06-final
 
 **Tip — porovnani vasi prace s resenim:**
 ```bash
-# Na step-01-start po vasi praci:
-git diff step-01-final -- Main.kt
+git diff step-01-final -- src/main/kotlin/dev/workshop/expense/Playground.kt
 ```
 
 ---
 
 ## Nastroje
 
-| Krok | Nastroj |
-|------|---------|
-| Step 1-4 | https://play.kotlinlang.org (nic neinstalujete) |
-| Step 5-6 | IntelliJ IDEA Community + JDK 21 |
+| Nastroj | Pouziti |
+|---------|---------|
+| IntelliJ IDEA Community | Vsechny kroky |
+| JDK 21 | Kompilace a spusteni |
 
 Podrobny navod k instalaci: [SETUP.md](SETUP.md)
 

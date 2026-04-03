@@ -1,14 +1,13 @@
-# Step 3 — List a HashMap
-
-## Co uz mame
-- Step 1: Promenne a funkce
-- Step 2: Data class Expense
+# Step 3 — HashMap jako databaze
 
 ## Co budeme delat
-HashMap jako in-memory databaze pro ukladani vydaju. Null safety s operatorem ?.
+Naucime se HashMap: klic-hodnota struktura, null safety operator `?.`.
 
-## Nastroj
-play.kotlinlang.org
+## Jak spustit
+1. Otevrete tuto slozku v IntelliJ IDEA (File → Open)
+2. Pockejte az se stahnou zavislosti
+3. Spustte: `./mvnw spring-boot:run`
+4. Vystup uvidite v terminalu (ne v prohlizeci)
 
 ## Ukoly
-Otevri Main.kt a doplni kod kde vidis TODO komentare.
+Otevrete `src/main/kotlin/dev/workshop/expense/Playground.kt` a doplnte TODO.

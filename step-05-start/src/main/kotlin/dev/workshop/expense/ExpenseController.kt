@@ -8,22 +8,21 @@ import org.springframework.web.bind.annotation.*
 class ExpenseController(private val service: ExpenseService) {
 
     // TODO: Pridejte @GetMapping
-    // TODO: Implementujte metodu getAll() ktera vrati service.getAll()
+    // TODO: fun getAll(): List<Expense> = service.getAll()
 
     // TODO: Pridejte @PostMapping
-    // TODO: Implementujte metodu add(@RequestBody request: CreateExpenseRequest)
-    //       ktera vrati service.add(request.description, request.amount)
+    // TODO: fun add(@RequestBody request: CreateExpenseRequest): Expense =
+    //           service.add(request.description, request.amount)
 
     // TODO: Pridejte @DeleteMapping("/{id}")
-    // TODO: Implementujte metodu delete(@PathVariable id: Int)
-    //       ktera vrati mapOf("success" to service.delete(id))
+    // TODO: fun delete(@PathVariable id: Int): Map<String, Any> =
+    //           mapOf("success" to service.delete(id))
 
     // TODO: Pridejte @GetMapping("/total")
-    // TODO: Implementujte metodu getTotal()
-    //       ktera vrati mapOf("total" to service.total())
+    // TODO: fun getTotal(): Map<String, Int> = mapOf("total" to service.total())
 
     // TODO: Pridejte @GetMapping("/{id}")
-    // TODO: Implementujte metodu findById(@PathVariable id: Int)
-    //       Pokud vydaj existuje, vradte ResponseEntity.ok(expense)
-    //       Pokud ne, vradte ResponseEntity.notFound().build()
+    // TODO: fun findById(@PathVariable id: Int): ResponseEntity<Expense>
+    //       Pokud existuje → ResponseEntity.ok(expense)
+    //       Pokud ne → ResponseEntity.notFound().build()
 }
