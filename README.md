@@ -1,36 +1,36 @@
-# Step 5 — Spring Boot Controller (reseni)
+# Step 5 — Spring Boot Controller (solution)
 
-## Co jsme udelali
-- @RestController = trida prijima HTTP requesty
-- @RequestMapping = bazova URL pro vsechny endpointy
-- @GetMapping / @PostMapping / @DeleteMapping = HTTP metody
-- @RequestBody = JSON body → Kotlin objekt
-- @PathVariable = {id} z URL
-- ResponseEntity = HTTP odpoved se status kodem
+## What we did
+- @RestController = class accepts HTTP requests
+- @RequestMapping = base URL for all endpoints
+- @GetMapping / @PostMapping / @DeleteMapping = HTTP methods
+- @RequestBody = JSON body → Kotlin object
+- @PathVariable = {id} from URL
+- ResponseEntity = HTTP response with status code
 
-## Jak otestovat
+## How to test
 ```bash
-# Pridat vydaje
+# Add expenses
 curl -X POST http://localhost:8080/expenses \
   -H "Content-Type: application/json" \
-  -d '{"description":"Obed","amount":150}'
+  -d '{"description":"Lunch","amount":150}'
 
 curl -X POST http://localhost:8080/expenses \
   -H "Content-Type: application/json" \
-  -d '{"description":"Kava","amount":50}'
+  -d '{"description":"Coffee","amount":50}'
 
-# Zobrazit vsechny
+# Show all
 curl http://localhost:8080/expenses
 
-# Najit podle ID
+# Find by ID
 curl http://localhost:8080/expenses/1
 
-# Celkova suma
+# Total sum
 curl http://localhost:8080/expenses/total
 
-# Smazat
+# Delete
 curl -X DELETE http://localhost:8080/expenses/1
 ```
 
-## Dalsi krok
-Otevri `step-06-start/` pro Swagger UI dokumentaci.
+## Next step
+Open `step-06-start/` for Swagger UI documentation.
