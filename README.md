@@ -1,27 +1,27 @@
 # Step 5 — Spring Boot Controller
 
-## Co budeme delat
-Pridame REST Controller — aplikace zacne prijímat HTTP requesty.
+## What we will do
+We will add a REST Controller — the application will start accepting HTTP requests.
 
-## Jak spustit
-1. Otevrete tuto slozku v IntelliJ IDEA (File → Open)
-2. Pockejte az se stahnou zavislosti
-3. Spustte: `./mvnw spring-boot:run`
-4. Otevrete v prohlizeci: http://localhost:8080/expenses
+## How to run
+1. Open this folder in IntelliJ IDEA (File → Open)
+2. Wait for dependencies to download
+3. Run: `./mvnw spring-boot:run`
+4. Open in browser: http://localhost:8080/expenses
 
-## Ukoly
-Otevrete `src/main/kotlin/dev/workshop/expense/ExpenseController.kt` a doplnte anotace a metody.
+## Tasks
+Open `src/main/kotlin/dev/workshop/expense/ExpenseController.kt` and fill in the annotations and methods.
 
-## Testovani API
+## Testing the API
 ```bash
-# Pridat vydaj
+# Add an expense
 curl -X POST http://localhost:8080/expenses \
   -H "Content-Type: application/json" \
-  -d '{"description":"Obed","amount":150}'
+  -d '{"description":"Lunch","amount":150}'
 
-# Zobrazit vsechny
+# Show all
 curl http://localhost:8080/expenses
 
-# Celkova suma
+# Total sum
 curl http://localhost:8080/expenses/total
 ```
