@@ -1,10 +1,10 @@
-# Step 2 — Data class a instance (reseni)
+# Step 2 — Data class and instances (solution)
 
-## Co jsme udelali
-- data class = sablona pro data s automatickym toString, equals, copy
-- Pojmenovane parametry — prehlednejsi nez pozicni
-- listOf() + maxBy { } — kolekce a lambda
-- copy() — nemenna data, nova kopie se zmenou
+## What we did
+- data class = template for data with automatic toString, equals, copy
+- Named parameters — more readable than positional
+- listOf() + maxBy { } — collections and lambdas
+- copy() — immutable data, new copy with a change
 
-## Dalsi krok
-Otevri `step-03-start/` pro HashMap jako databazi.
+## Next step
+Open `step-03-start/` for HashMap as a database.
