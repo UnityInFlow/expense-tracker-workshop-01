@@ -1,24 +1,24 @@
-# Step 4 — Service class (reseni)
+# Step 4 — Service class (solution)
 
-## Co jsme udelali
-- class ExpenseService — veskera logika na jednom miste
-- private = skryte detaily (database, nextId)
-- SRP — kazda trida dela jednu vec
+## What we did
+- class ExpenseService — all logic in one place
+- private = hidden details (database, nextId)
+- SRP — each class does one thing
 
-## Architektura
+## Architecture
 
 ```
-main() nebo Controller
+main() or Controller
        │
        ▼
-  ExpenseService          ← logika tady
+  ExpenseService          ← logic here
   + add / getAll / delete
-  - database (skryto)
+  - database (hidden)
        │
        ▼
-  HashMap<Int, Expense>   ← v Session 2 vymename za SQLite
+  HashMap<Int, Expense>   ← in Session 2 we replace with SQLite
 ```
 
-## Dalsi krok
-Otevri `step-05-start/` pro Spring Boot Controller.
-Od tohoto kroku budeme mit HTTP API!
+## Next step
+Open `step-05-start/` for Spring Boot Controller.
+From this step we will have an HTTP API!
