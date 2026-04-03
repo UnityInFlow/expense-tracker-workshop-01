@@ -10,15 +10,15 @@ class Playground : CommandLineRunner {
         println()
 
         val service = ExpenseService()
-        service.add("Obed", 150)
-        service.add("Kava", 50)
+        service.add("Lunch", 150)
+        service.add("Coffee", 50)
         service.add("Taxi", 320)
 
-        println("Vsechny: ${service.getAll()}")
-        println("Total: ${service.total()} Kc")
+        println("All: ${service.getAll()}")
+        println("Total: ${service.total()} CZK")
 
-        // TODO: Otestuj getAbove(100) — melo vratit Obed a Taxi
-        // TODO: Otestuj count() — melo vratit 3
-        // TODO: Zavolej deleteAll() a otestuj ze count() == 0
+        // TODO: Test getAbove(100) — should return Lunch and Taxi
+        // TODO: Test count() — should return 3
+        // TODO: Call deleteAll() and verify that count() == 0
     }
 }

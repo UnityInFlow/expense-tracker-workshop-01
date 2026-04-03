@@ -1,10 +1,10 @@
-# Step 3 — HashMap jako databaze (reseni)
+# Step 3 — HashMap as a database (solution)
 
-## Co jsme udelali
-- HashMap<Int, Expense> = klic-hodnota databaze v pameti
-- database[id] = ... — pridani, database.remove(id) — smazani
-- Null safety: `?.` safe call — zadna NullPointerException
-- sumOf { } — agregace nad kolekci
+## What we did
+- HashMap<Int, Expense> = key-value in-memory database
+- database[id] = ... — adding, database.remove(id) — deleting
+- Null safety: `?.` safe call — no NullPointerException
+- sumOf { } — aggregation over a collection
 
-## Dalsi krok
-Otevri `step-04-start/` pro Service class.
+## Next step
+Open `step-04-start/` for Service class.

@@ -1,7 +1,7 @@
 package dev.workshop.expense
 
 class ExpenseService {
-    // private = pristupne POUZE uvnitr tridy
+    // private = accessible ONLY inside this class
     private val database = HashMap<Int, Expense>()
     private var nextId = 1
 
@@ -21,13 +21,13 @@ class ExpenseService {
     fun total(): Int = database.values.sumOf { it.amount }
 
     // TODO: fun getAbove(threshold: Int): List<Expense>
-    //       Vrati vydaje jejichz castka > threshold
+    //       Returns expenses whose amount > threshold
     //       Hint: database.values.filter { it.amount > threshold }
 
     // TODO: fun count(): Int
-    //       Vrati pocet vydaju
+    //       Returns the number of expenses
 
     // TODO: fun deleteAll()
-    //       Smaze vse, resetuje nextId na 1
+    //       Deletes everything, resets nextId to 1
     //       Hint: database.clear()
 }

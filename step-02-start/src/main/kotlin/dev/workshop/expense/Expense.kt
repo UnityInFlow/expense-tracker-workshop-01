@@ -1,6 +1,6 @@
 package dev.workshop.expense
 
-// TODO: Vytvor data class Expense se 4 fieldy:
+// TODO: Create data class Expense with 4 fields:
 //   id: Int
 //   description: String
 //   amount: Int

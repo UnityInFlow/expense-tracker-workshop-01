@@ -6,24 +6,24 @@ import org.springframework.stereotype.Component
 @Component
 class Playground : CommandLineRunner {
     override fun run(vararg args: String?) {
-        println("=== Step 4: ExpenseService — RESENI ===")
+        println("=== Step 4: ExpenseService — SOLUTION ===")
         println()
 
         val service = ExpenseService()
-        service.add("Obed", 150)
-        service.add("Kava", 50)
+        service.add("Lunch", 150)
+        service.add("Coffee", 50)
         service.add("Taxi", 320)
 
-        println("Vsechny: ${service.getAll()}")
-        println("Pocet: ${service.count()}")
-        println("Total: ${service.total()} Kc")
+        println("All: ${service.getAll()}")
+        println("Count: ${service.count()}")
+        println("Total: ${service.total()} CZK")
 
-        // Vydaje nad 100 Kc
+        // Expenses above 100 CZK
         val above = service.getAbove(100)
-        println("Nad 100 Kc: $above")  // Obed (150) a Taxi (320)
+        println("Above 100 CZK: $above")  // Lunch (150) and Taxi (320)
 
-        // Smazani vsech
+        // Delete all
         service.deleteAll()
-        println("Po deleteAll: ${service.count()}")  // 0
+        println("After deleteAll: ${service.count()}")  // 0
     }
 }

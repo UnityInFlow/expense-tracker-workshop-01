@@ -1,14 +1,14 @@
 # Step 4 — Service class
 
-## Co budeme delat
-Vytvorime ExpenseService — tridu ktera zapouzdruje vsechnu logiku.
+## What we will do
+We will create ExpenseService — a class that encapsulates all the logic.
 
-## Jak spustit
-1. Otevrete tuto slozku v IntelliJ IDEA (File → Open)
-2. Pockejte az se stahnou zavislosti
-3. Spustte: `./mvnw spring-boot:run`
-4. Vystup uvidite v terminalu (ne v prohlizeci)
+## How to run
+1. Open this folder in IntelliJ IDEA (File → Open)
+2. Wait for dependencies to download
+3. Run: `./mvnw spring-boot:run`
+4. You will see the output in the terminal (not in the browser)
 
-## Ukoly
-Otevrete `src/main/kotlin/dev/workshop/expense/ExpenseService.kt` a doplnte TODO metody.
-Pak otevrete `Playground.kt` a otestujte je.
+## Tasks
+Open `src/main/kotlin/dev/workshop/expense/ExpenseService.kt` and fill in the TODO methods.
+Then open `Playground.kt` and test them.

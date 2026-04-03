@@ -1,13 +1,13 @@
-# Step 1 — Promenne a funkce
+# Step 1 — Variables and functions
 
-## Co budeme delat
-Naucime se zaklady Kotlinu: promenne (val/var), typy a funkce.
+## What we will do
+We will learn the basics of Kotlin: variables (val/var), types and functions.
 
-## Jak spustit
-1. Otevrete tuto slozku v IntelliJ IDEA (File → Open)
-2. Pockejte az se stahnou zavislosti
-3. Spustte: `./mvnw spring-boot:run`
-4. Vystup uvidite v terminalu (ne v prohlizeci)
+## How to run
+1. Open this folder in IntelliJ IDEA (File → Open)
+2. Wait for dependencies to download
+3. Run: `./mvnw spring-boot:run`
+4. You will see the output in the terminal (not in the browser)
 
-## Ukoly
-Otevrete `src/main/kotlin/dev/workshop/expense/Playground.kt` a doplnte TODO.
+## Tasks
+Open `src/main/kotlin/dev/workshop/expense/Playground.kt` and fill in the TODOs.

@@ -1,7 +1,7 @@
 package dev.workshop.expense
 
 class ExpenseService {
-    // private = pristupne POUZE uvnitr tridy
+    // private = accessible ONLY inside this class
     private val database = HashMap<Int, Expense>()
     private var nextId = 1
 
@@ -20,7 +20,7 @@ class ExpenseService {
 
     fun total(): Int = database.values.sumOf { it.amount }
 
-    // filter { } — vrati jen prvky splnujici podmínku
+    // filter { } — returns only elements satisfying the condition
     fun getAbove(threshold: Int): List<Expense> =
         database.values.filter { it.amount > threshold }
 
